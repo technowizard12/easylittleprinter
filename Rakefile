@@ -25,7 +25,6 @@ Jeweler::Tasks.new do |gem|
   gem.add_dependency "markaby"
   gem.add_dependency "builder"
   gem.add_dependency "rack"
-  gem.executables = ['easylittleprinter']
 end
 Jeweler::RubygemsDotOrgTasks.new
 
