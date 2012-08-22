@@ -10,6 +10,7 @@ $imgHostURL = ENV['HOSTURL']
 $title = ENV['TITLE']
 $sampleImg = ENV['SAMPLE']
 $iconImg = ENV['ICON']
+$publishes = EVN['FREQUENCY']
 
 module LPImgApp::Controllers
 
@@ -36,10 +37,56 @@ module LPImgApp::Controllers
         else
             userDate = Date.new
             userDate = Time.parse(@passedLDT)
-            if userDate.monday? == true #change to .tuesday? etc, depending on the desired day
-                render :currentEdition
-            else
-                r(200, "Error 200. Nothing to report, boss")
+            if $publishes = "every_monday"
+                if userDate.monday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "every_tuesday"
+                if userDate.tuesday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "every_wednesday"
+                if userDate.wednesday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "every_thursday"
+                if userDate.thursday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "every_friday"
+                if userDate.friday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "every_saturday"
+                if userDate.saturday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "every_sunday"
+                if userDate.sunday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
+            elseif $publishes = "everyday"
+                    render :currentEdition
+            elseif $publishes = "every_mwf"
+                if userDate.monday? == true or userDate.wednesday? == true or userDate.friday? == true
+                    render :currentEdition
+                else
+                    r(200, "Error 200. Nothing to report, boss")
+                end
             end
         end
         end
@@ -107,11 +154,4 @@ module LPImgApp::Views
     img :src => $imgHostURL + "/" + $iconImg + ".png"
   end
 
-end
-
-module EasyLittlePrinter
-
-def self.do
-  exec('camping ' + Dir.getwd)
-end
 end

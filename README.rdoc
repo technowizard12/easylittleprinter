@@ -31,20 +31,15 @@ TITLE , the title of the pages with images on them. Purely cosmetic.
 SAMPLE , the filename of the sample image, no slashes, no extensions
 ICON , the filename of the icon image, no slashes, no extensions. Must be a png.
 
+You can configure the application to publish on certain days. Non-temporally-bound publications are not supported at this time. You can totally mod my code if you want, though.
 
-== Local Usage
+The following are the options for the FREQUENCY variable:
 
-"require 'easylittleprinter'"
+every_monday, every_tuesday, every_wednesday, every_thursday, every_friday, every_saturday, every_sunday, everyday, every_mwf
 
-"EasyLittlePrinter.do"
+NOTE!!! Once the user passes the check to make sure the date they're accessing from is within your publishing specs, the server will then attempt to serve an image with a corresponding filename, e.g. 2012-08-30.png See above for more information.
 
-or, from the command like
-
-"easylittleprinter"
-
-Both of these start The Camping Server running the site.
-
-== Heroku Usage
+== Deploying to Heroku
 
 Create a config.ru file containing:
 
@@ -53,6 +48,8 @@ require 'easylittleprinter'
 
 run easylittleprinter
 
+
+This part of the process can also be used for deploying to a physical server.
 
 You'll also need a Gemfile:
 
