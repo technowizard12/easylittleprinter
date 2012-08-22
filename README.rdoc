@@ -90,17 +90,20 @@ You're done!
 
 == How to Use, a walkthrough
 
-Get this server up and running. I recommend using Heroku, for now, although you can always run it just as
-easily as a rack app on a physical server. Same deal as it's configured for heroku, just without the heroku-y bit.
+Get this server up and running. I recommend using Heroku, for now, although 
+you can always run it just as easily as a rack app on a physical server. Same deal 
+as it's configured for heroku, just without the heroku-y bit.
 
-Now that you've got it up and running, you should set up a github pages account. This will be your static image server.
- eLP (easylittleprinter) serves images based on criteria. In your github pages repo, place your image files. The
- images files should be named as described above. You should also have a meta.json in the same directory as your images.
+Now that you've got it up and running, you should set up a github pages account. 
+This will be your static image server. eLP (easylittleprinter) serves images based 
+on criteria. In your github pages repo, place your image files. The images files should 
+be named as described above. You should also have a meta.json in the same directory as your images.
  make sure that local_delivery_time is set to true. Also have your icon png and your sample there.
 
-A brief overview of serving the file: BERG Cloud requests it, eLP checks whether the date being sent matches the 
-delivery criteria you set in FREQUENCY. if it does, eLP serves the file with the same name as the date that the user
- is requesting from. This way, you can make sure that your image for monday the 26th will be served wherever it is
+A brief overview of serving the file: BERG Cloud requests it, eLP checks whether 
+the date being sent matches the delivery criteria you set in FREQUENCY. if it does, 
+eLP serves the file with the same name as the date that the user is requesting from. 
+This way, you can make sure that your image for monday the 26th will be served wherever it is
 monday the 26th, and nowhere else. Trust me, it's easier on both of us this way.
 
 It's imperative that you use the image file extension set in EXTENSION for all of your image 
