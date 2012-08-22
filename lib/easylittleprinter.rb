@@ -1,7 +1,7 @@
 require 'camping'
 require 'date'
 require 'camping/server'
-require '/etc/easylittleprinter/lpconfig.rb'
+require './lpconfig.rb'
 
 module EasyLittlePrinter
 def self.do
