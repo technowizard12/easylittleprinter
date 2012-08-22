@@ -10,7 +10,7 @@ $imgHostURL = ENV['HOSTURL']
 $title = ENV['TITLE']
 $sampleImg = ENV['SAMPLE']
 $iconImg = ENV['ICON']
-$publishes = EVN['FREQUENCY']
+$publishes = ENV['FREQUENCY']
 
 module LPImgApp::Controllers
 
