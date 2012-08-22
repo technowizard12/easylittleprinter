@@ -11,11 +11,11 @@ end
 
 Camping.goes :LPImgApp
 
-$imgFileExtension = LPConfig.ImgFileExtension
-$imgHostURL = LPConfig.ImgHostUrl
-$title = LPConfig.Title
-$sampleImg = LPConfig.SampleImg
-$iconImg = LPConfig.IconImg
+$imgFileExtension = LPConfig.imgFileExtension
+$imgHostURL = LPConfig.imgHostUrl
+$title = LPConfig.title
+$sampleImg = LPConfig.sampleImg
+$iconImg = LPConfig.iconImg
 
 module LPImgApp::Controllers
 
