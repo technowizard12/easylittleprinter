@@ -36,15 +36,19 @@ SAMPLE , the filename of the sample image, no slashes, no extensions
 ICON , the filename of the icon image, no slashes, no extensions. Must be a png.
 
 
-You can configure the application to publish on certain days. Non-temporally-bound publications are not supported at this time. You can totally mod my code if you want, though.
+You can configure the application to publish on certain days. Non-temporally-bound publications 
+are not supported at this time. You can totally mod my code if you want, though.
 
 
 The following are the options for the FREQUENCY variable:
 
 
-every_monday, every_tuesday, every_wednesday, every_thursday, every_friday, every_saturday, every_sunday, everyday, every_mwf
+every_monday, every_tuesday, every_wednesday, every_thursday, every_friday, 
+every_saturday, every_sunday, everyday, every_mwf
 
-NOTE!!! Once the user passes the check to make sure the date they're accessing from is within your publishing specs, the server will then attempt to serve an image with a corresponding filename, e.g. 2012-08-30.png
+NOTE!!! Once the user passes the check to make sure the date they're accessing 
+from is within your publishing specs, the server will then attempt to serve an image 
+with a corresponding filename, e.g. 2012-08-30.png
 
 == Deploying to Heroku
 
@@ -99,9 +103,9 @@ delivery criteria you set in FREQUENCY. if it does, eLP serves the file with the
  is requesting from. This way, you can make sure that your image for monday the 26th will be served wherever it is
 monday the 26th, and nowhere else. Trust me, it's easier on both of us this way.
 
-It's imperative that you use the image file extension set in EXTENSION for all of your image files. icon.png will always
-be served as a png, though. When specifying the names of the sample and the icon, only put the names of the files without
- extensions.
+It's imperative that you use the image file extension set in EXTENSION for all of your image 
+files. icon.png will always be served as a png, though. When specifying the names of the sample 
+and the icon, only put the names of the files without extensions.
 
 There you go! Test it out. Try out all the hooks.
 
@@ -114,7 +118,8 @@ There you go! Test it out. Try out all the hooks.
 * Start a feature/bugfix branch.
 * Commit and push until you are happy with your contribution.
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or 
+  is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 == Copyright
 
