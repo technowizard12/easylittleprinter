@@ -109,6 +109,9 @@ module LPImgApp::Views
 
 end
 
+module EasyLittlePrinter
+
 def self.do
   exec('camping ' + Dir.pwd)
+end
 end
