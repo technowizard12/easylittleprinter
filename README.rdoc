@@ -14,7 +14,8 @@ The file extension is specified in the configuration file
 
 == Usage
 
-"require 'easylittleprinter'
+"require 'easylittleprinter'"
+
 "EasyLittlePrinter.do"
 
 or, from the command like
