@@ -110,7 +110,7 @@ module LPImgApp::Views
 #View for the icon
 
   def icon
-    img :src => $imgHostURL + "/" + $iconImg + $imgFileExtension
+    img :src => $imgHostURL + "/" + $iconImg + ".png"
   end
 
 end
