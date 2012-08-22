@@ -21,6 +21,13 @@ or, from the command like
 
 "easylittleprinter"
 
+== Configuration
+
+You'll need to have a config file. The default location for it is
+/etc/easylittleprinter/lpconfig.rb
+
+A template is provided in docs/lpconfig_sample.rb
+
 == Contributing to easylittleprinter
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.

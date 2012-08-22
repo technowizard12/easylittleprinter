@@ -1,22 +1,22 @@
 class LPConfig
 
 def self.imgFileExtension
- '.png'
+ '.png' #the file extension of your images. You get one. Only one.
 end
 
 def self.imgHostUrl
-'http://technowizard12.github.com'
+'http://you.github.com' #the address of the static image server. No trailing slash. Github pages rocks for this
 end
 
 def self.title
-'The Weekly Font'
+'Imma Monkey!' #the title of your image serving pages. Purely cosmetic.
 end
 
 def self.sampleImg
-'/sample'
+'/sample' #the address of your sample image sans extension and trailing slash
 end
 
 def self.iconImg
-'/icon'
+'/icon' #the address of your icon image sans extension and trailing slash
 end
 end
