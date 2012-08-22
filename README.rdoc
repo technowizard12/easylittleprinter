@@ -34,6 +34,8 @@ or, from the command like
 
 "easylittleprinter"
 
+Both of these start The Camping Server running the site.
+
 == Configuration
 
 You'll need to have a config file. The default location for it is
