@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'picnic/cli'
+
+cli = Picnic::Cli.new(
+  'easylittleprinter',
+  :app_file => File.expand_path(File.dirname(File.expand_path(__FILE__))+"/../lib/easylittleprinter.rb")
+)
+
+cli.handle_cli_input

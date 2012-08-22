@@ -1,0 +1,14 @@
+$: << File.dirname(File.expand_path(__FILE__))
+
+$APP_NAME ||= 'blog'
+$APP_ROOT ||= File.expand_path(File.dirname(__FILE__)+'/..')
+
+require 'rubygems'
+require 'picnic'
+require 'picnic/logger'
+
+Camping.goes :Blog
+
+Picnic::Logger.init_global_logger!
+
+# Our Camping application's implementation will go here...
