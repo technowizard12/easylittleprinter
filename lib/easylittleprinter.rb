@@ -112,6 +112,6 @@ end
 module EasyLittlePrinter
 
 def self.do
-  exec('camping ' + Dir.pwd)
+  exec('camping ' + Dir.getwd)
 end
 end
