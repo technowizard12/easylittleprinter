@@ -17,6 +17,10 @@ The file extension is specified in the configuration file
 "require 'easylittleprinter'
 "EasyLittlePrinter.do"
 
+or, from the command like
+
+"easylittleprinter"
+
 == Contributing to easylittleprinter
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
