@@ -1,11 +1,11 @@
 require 'camping'
 require 'date'
 require 'camping/server'
+require '/etc/easylittleprinter/config.rb'
 
 module EasyLittlePrinter
 def self.do
-  server = Camping::Server.new
-  server.start "self"
+  exec('camping easylittleprinter.rb')
 end
 end
 

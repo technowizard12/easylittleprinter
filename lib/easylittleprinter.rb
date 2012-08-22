@@ -1,6 +1,7 @@
 require 'camping'
 require 'date'
 require 'camping/server'
+require '/etc/easylittleprinter/config.rb'
 
 module EasyLittlePrinter
 def self.do
@@ -10,11 +11,11 @@ end
 
 Camping.goes :LPImgApp
 
-$imgFileExtension = [:imgFileExtension]
-$imgHostURL = [:imgHostURL]
-$title = [:title]
-$sampleImg = [:sampleImg]
-$iconImg = [:iconImg]
+$imgFileExtension = Config.imgFileExtension
+$imgHostURL = Config.imgHostUrl
+$title = Config.title
+$sampleImg = Config.sampleImg
+$iconImg = Config.iconImg
 
 module LPImgApp::Controllers
 
