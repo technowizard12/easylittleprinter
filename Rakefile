@@ -17,11 +17,14 @@ Jeweler::Tasks.new do |gem|
   gem.name = "easylittleprinter"
   gem.homepage = "http://github.com/technowizard12/easylittleprinter"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Little Printer Publication in a Box"
+  gem.description = "Serves static images from a remote server on the dates assigned in their filenames to BERG Cloud"
   gem.email = "simon@simonorrstudio.com"
   gem.authors = ["Simon Orr"]
-  # dependencies defined in Gemfile
+  gem.add_dependency "camping"
+  gem.add_dependency "markaby"
+  gem.add_dependency "builder"
+  gem.add_dependency "rack"
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -32,15 +35,6 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
-
-task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
