@@ -4,6 +4,10 @@ easylittleprinter is a static image server for the BERG Cloud Little Printer.
 Image editions, icons, samples, and meta.json should be stored in the root
 directory of this server.
 
+== Installation
+
+"gem install easylittleprinter"
+
 == Image naming format
 
 The image editions should be named in the following format:
