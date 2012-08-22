@@ -1,6 +1,21 @@
 = easylittleprinter
 
-Description goes here.
+easylittleprinter is a static image server for the BERG Cloud Little Printer.
+Image editions, icons, samples, and meta.json should be stored in the root
+directory of this server.
+
+== Image naming format
+
+The image editions should be named in the following format:
+
+yyyy-mm-dd
+
+The file extension is specified in the configuration file
+
+== Usage
+
+"require 'easylittleprinter'
+"EasyLittlePrinter.do"
 
 == Contributing to easylittleprinter
  
