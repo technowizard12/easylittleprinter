@@ -2,7 +2,15 @@
 
 easylittleprinter is a static image server for the BERG Cloud Little Printer.
 Image editions, icons, samples, and meta.json should be stored in the root
-directory of this server.
+directory of a remote static server. NOT this server.
+
+Incidentally, Github Pages works fantastically as a remote static server.
+
+You could probably set it up so that you don't have to use a remote server,
+but that ain't no fun.
+
+Presently, this gem works for standalone machines. Heroku support is
+coming soon.
 
 == Installation
 
