@@ -21,9 +21,6 @@ The image editions should be named in the following format:
 
 yyyy-mm-dd
 
-The image will be released when it matches the date of the requester
-(although the image will only consider rendering if it is a Monday. That will be fixed soon)
-
 The file extension is specified in the configuration file
 
 == Required Environmental Variables
