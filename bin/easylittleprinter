@@ -2,4 +2,4 @@
 
 require 'easylittleprinter'
 
-easylittleprinter.do
+EasyLittlePrinter.do
