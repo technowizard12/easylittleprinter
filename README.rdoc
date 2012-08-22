@@ -56,7 +56,7 @@ You'll also need a Gemfile:
 
 source :rubygems
 
-gem "easylittleprinter", ">=0.2.0"
+gem "easylittleprinter", ">=0.2.1"
 
 gem "camping"
 
