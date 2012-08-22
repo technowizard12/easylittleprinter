@@ -1,5 +1,12 @@
 require 'camping'
 require 'date'
+require 'camping/server'
+
+module EasyLittlePrinter
+def self.do
+  exec('camping easylittleprinter.rb')
+end
+end
 
 Camping.goes :LPImgApp
 
