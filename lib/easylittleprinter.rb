@@ -5,7 +5,7 @@ require '/etc/easylittleprinter/lpconfig.rb'
 
 module EasyLittlePrinter
 def self.do
-  exec('camping'+ Dir.getwd)
+  exec('camping '+ Dir.getwd)
 end
 end
 
