@@ -13,10 +13,10 @@ def self.title
 end
 
 def self.sampleImg
-'/sample' #the address of your sample image sans extension and trailing slash
+'sample' #the filename of your sample image sans extension
 end
 
 def self.iconImg
-'/icon' #the address of your icon image sans extension and trailing slash
+'icon' #the filename of your icon image sans extension
 end
 end

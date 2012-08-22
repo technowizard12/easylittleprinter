@@ -104,13 +104,13 @@ module LPImgApp::Views
 #View for the sample
 
   def sample
-    img :src => $imgHostURL + "/" + $sampleImg
+    img :src => $imgHostURL + "/" + $sampleImg + $imgFileExtension
   end
 
 #View for the icon
 
   def icon
-    img :src => $imgHostURL + "/" + $iconImg
+    img :src => $imgHostURL + "/" + $iconImg + $imgFileExtension
   end
 
 end
