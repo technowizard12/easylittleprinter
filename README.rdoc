@@ -21,23 +21,30 @@ The image editions should be named in the following format:
 
 yyyy-mm-dd
 
-The file extension is specified in the configuration file
+The file extension is specified in the Environment Vars
 
-== Required Environmental Variables
+== Required Environment Variables
 
 EXTENSION , the file extension for all of your images. Pick one. The icon will always be .png
+
 HOSTURL , the address of your static image host, e.g. http://yourname.github.com . NO TRAILING SLASH!
+
 TITLE , the title of the pages with images on them. Purely cosmetic.
+
 SAMPLE , the filename of the sample image, no slashes, no extensions
+
 ICON , the filename of the icon image, no slashes, no extensions. Must be a png.
+
 
 You can configure the application to publish on certain days. Non-temporally-bound publications are not supported at this time. You can totally mod my code if you want, though.
 
+
 The following are the options for the FREQUENCY variable:
+
 
 every_monday, every_tuesday, every_wednesday, every_thursday, every_friday, every_saturday, every_sunday, everyday, every_mwf
 
-NOTE!!! Once the user passes the check to make sure the date they're accessing from is within your publishing specs, the server will then attempt to serve an image with a corresponding filename, e.g. 2012-08-30.png See above for more information.
+NOTE!!! Once the user passes the check to make sure the date they're accessing from is within your publishing specs, the server will then attempt to serve an image with a corresponding filename, e.g. 2012-08-30.png
 
 == Deploying to Heroku
 
@@ -76,6 +83,29 @@ Next, set your environment variables with "heroku config:add {put the vars here}
 
 You're done!
 
+
+== How to Use, a walkthrough
+
+Get this server up and running. I recommend using Heroku, for now, although you can always run it just as
+easily as a rack app on a physical server. Same deal as it's configured for heroku, just without the heroku-y bit.
+
+Now that you've got it up and running, you should set up a github pages account. This will be your static image server.
+ eLP (easylittleprinter) serves images based on criteria. In your github pages repo, place your image files. The
+ images files should be named as described above. You should also have a meta.json in the same directory as your images.
+ make sure that local_delivery_time is set to true. Also have your icon png and your sample there.
+
+A brief overview of serving the file: BERG Cloud requests it, eLP checks whether the date being sent matches the 
+delivery criteria you set in FREQUENCY. if it does, eLP serves the file with the same name as the date that the user
+ is requesting from. This way, you can make sure that your image for monday the 26th will be served wherever it is
+monday the 26th, and nowhere else. Trust me, it's easier on both of us this way.
+
+It's imperative that you use the image file extension set in EXTENSION for all of your image files. icon.png will always
+be served as a png, though. When specifying the names of the sample and the icon, only put the names of the files without
+ extensions.
+
+There you go! Test it out. Try out all the hooks.
+
+
 == Contributing to easylittleprinter
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
@@ -88,6 +118,7 @@ You're done!
 
 == Copyright
 
-Copyright (c) 2012 Simon Orr. See LICENSE.txt for
-further details.
+This code is under the MIT License, which basically means that you can do what you want with it, so long as you 
+keep the license along with it, and the license file. I'd appreciate it if you mentioned me if you do decide
+to use it, though.
 
