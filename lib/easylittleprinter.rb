@@ -43,45 +43,45 @@ module LPImgApp::Controllers
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "every_tuesday"
+            elsif $publishes == "every_tuesday"
                 if userDate.tuesday? == true
                     render :currentEdition
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "every_wednesday"
+            elsif $publishes == "every_wednesday"
                 if userDate.wednesday? == true
                     render :currentEdition
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "every_thursday"
+            elsif $publishes == "every_thursday"
                 if userDate.thursday? == true
                     render :currentEdition
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "every_friday"
+            elsif $publishes == "every_friday"
                 if userDate.friday? == true
                     render :currentEdition
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "every_saturday"
+            elsif $publishes == "every_saturday"
                 if userDate.saturday? == true
                     render :currentEdition
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "every_sunday"
+            elsif $publishes == "every_sunday"
                 if userDate.sunday? == true
                     render :currentEdition
                 else
                     r(200, "Error 200. Nothing to report, boss")
                 end
-            else if $publishes == "everyday"
+            elsif $publishes == "everyday"
                     render :currentEdition
-            else if $publishes == "every_mwf"
+            elsif $publishes == "every_mwf"
                 if userDate.monday? == true or userDate.wednesday? == true or userDate.friday? == true
                     render :currentEdition
                 else
