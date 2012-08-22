@@ -37,14 +37,13 @@ module Settings #code from http://speakmy.name
 
 end
 
-module EasyLittlePrinter($configFile)
+module EasyLittlePrinter
 def self.do
   exec('camping '+ Dir.getwd)
 end
 
 Camping.goes :LPImgApp
 
-Settings.load!($configFile)
 
 $imgFileExtension = Settings.config[:imgFileExtension]
 $imgHostURL = Settings.config[:imgHostUrl]
