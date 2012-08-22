@@ -98,7 +98,7 @@ Now that you've got it up and running, you should set up a github pages account.
 This will be your static image server. eLP (easylittleprinter) serves images based 
 on criteria. In your github pages repo, place your image files. The images files should 
 be named as described above. You should also have a meta.json in the same directory as your images.
- make sure that local_delivery_time is set to true. Also have your icon png and your sample there.
+make sure that local_delivery_time is set to true. Also have your icon png and your sample there.
 
 A brief overview of serving the file: BERG Cloud requests it, eLP checks whether 
 the date being sent matches the delivery criteria you set in FREQUENCY. if it does, 
