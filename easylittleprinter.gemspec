@@ -5,14 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = "easylittleprinter"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Simon Orr"]
   s.date = "2012-08-22"
   s.description = "Serves static images from a remote server on the dates assigned in their filenames to BERG Cloud"
   s.email = "simon@simonorrstudio.com"
-  s.executables = ["easylittleprinter"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -26,7 +25,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bin.easylittleprinter",
-    "bin/easylittleprinter",
     "docs/lpconfig_sample.rb",
     "easylittleprinter.gemspec",
     "lib/easylittleprinter.rb",
