@@ -9,8 +9,7 @@ Incidentally, Github Pages works fantastically as a remote static server.
 You could probably set it up so that you don't have to use a remote server,
 but that ain't no fun.
 
-Presently, this gem works for standalone machines. Heroku support is
-coming soon.
+You can either run this guy locally, or on heroku.
 
 == Installation
 
@@ -24,7 +23,16 @@ yyyy-mm-dd
 
 The file extension is specified in the configuration file
 
-== Usage
+== Required Environmental Variables
+
+EXTENSION , the file extension for all of your images. Pick one. The icon will always be .png
+HOSTURL , the address of your static image host, e.g. http://yourname.github.com . NO TRAILING SLASH!
+TITLE , the title of the pages with images on them. Purely cosmetic.
+SAMPLE , the filename of the sample image, no slashes, no extensions
+ICON , the filename of the icon image, no slashes, no extensions. Must be a png.
+
+
+== Local Usage
 
 "require 'easylittleprinter'"
 
@@ -36,12 +44,40 @@ or, from the command like
 
 Both of these start The Camping Server running the site.
 
-== Configuration
+== Heroku Usage
 
-You'll need to have a config file. The default location for it is
-/etc/easylittleprinter/lpconfig.rb
+Create a config.ru file containing:
 
-A template is provided in docs/lpconfig_sample.rb
+
+require 'easylittleprinter'
+
+run easylittleprinter
+
+
+You'll also need a Gemfile:
+
+
+source :rubygems
+
+gem "easylittleprinter", ">=0.2.0"
+
+gem "camping"
+
+gem "markaby"
+
+
+
+Initialize a git repo in the folder where your files are, add them, commit
+
+Then run "heroku create {your app anme here, minus brackets}"
+
+Then run "git push heroku master"
+
+
+
+Next, set your environment variables with "heroku config:add {put the vars here}
+
+You're done!
 
 == Contributing to easylittleprinter
  
